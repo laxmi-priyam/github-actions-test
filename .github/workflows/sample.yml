@@ -11,4 +11,12 @@ jobs:
       - name : multiline script
         run : |
          npm -v
-         node -v   
+         node -v
+  runs-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name : python command
+        run : |
+          import platform
+          print(platform.processor())
+        shell: python  
