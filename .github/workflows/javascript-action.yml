@@ -16,6 +16,7 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo $GITHUB_TOKEN
+          echo "${{github.token}}"
       - name: javascript-action
         uses: actions/hello-world-javascript-action@v1
         id: greet
