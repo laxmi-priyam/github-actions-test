@@ -3,13 +3,13 @@ name: Workflow-actions
 on: [push]
 
 jobs:
-  javascipt-action :
-		runs-on: ubuntu-latest
-		steps:
-			- name: javascript-action
-			uses: actions/hello-world-javascript-action@v1
-			id: greet
-			with:
-				who-to-greet: Laxmi
-			-name : display-output
-			run: echo "{{steps.greet.outputs.time}}"
+  simple-workflow:
+    runs-on : ubuntu-latest
+    steps :
+      - name : javascript-workflow
+      uses : actions/hello-world-javascript-action@v1
+      id: greet
+      with :
+        who-to-greet : Laxmi
+      - name : display output
+      run : echo "{{steps.greet.outputs.time}}"    		
