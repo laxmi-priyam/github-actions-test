@@ -1,15 +1,15 @@
-name: Workflow-actions
+name: second worflow
 
 on: [push]
 
 jobs:
-  simple-workflow:
+  sample-workflow:
     runs-on: ubuntu-latest
     steps:
-        -name: javascript-workflow
-        uses: actions/hello-world-javascript-action@v1
-        id: greet
-        with:
-          who-to-greet: Laxmi
-        -name: display output
-        run: echo "{{steps.greet.outputs.time}}"    		
+      -name: javascript-action
+      uses: actions/hello-world-javscript-action@v1
+      id: greet
+      with:
+        who-to-greet: Laxmi
+      -name: display output
+      run: echo "{{steps.greet.outputs.time}}"
