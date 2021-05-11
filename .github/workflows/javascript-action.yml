@@ -4,12 +4,12 @@ on: [push]
 
 jobs:
   simple-workflow:
-    runs-on : ubuntu-latest
-    steps :
-      - name : javascript-workflow
-      uses : actions/hello-world-javascript-action@v1
+    runs-on: ubuntu-latest
+    steps:
+      - name: javascript-workflow
+      uses: actions/hello-world-javascript-action@v1
       id: greet
-      with :
-        who-to-greet : Laxmi
-      - name : display output
-      run : echo "{{steps.greet.outputs.time}}"    		
+      with:
+        who-to-greet: Laxmi
+      - name: display output
+      run: echo "{{steps.greet.outputs.time}}"    		
