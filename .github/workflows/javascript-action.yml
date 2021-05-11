@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: javascript-action
-        uses: actions/hello-world-javscript-action@v1
+        uses: actions/hello-world-javascript-action@v1
         id: greet
         with:
           who-to-greet: Laxmi
