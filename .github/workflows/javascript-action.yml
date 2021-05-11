@@ -6,6 +6,11 @@ jobs:
   sample-workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout git
+        uses: actions/checkout@v1
+        run: |
+          pwd
+          ls -a
       - name: javascript-action
         uses: actions/hello-world-javascript-action@v1
         id: greet
