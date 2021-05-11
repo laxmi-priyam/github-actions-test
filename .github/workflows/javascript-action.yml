@@ -1,6 +1,6 @@
-name: second worflow
+name : Sample-commands
 
-on: [push]
+on : [push]
 
 jobs:
   sample-workflow:
@@ -12,4 +12,4 @@ jobs:
       with:
         who-to-greet: Laxmi
       -name: display output
-      run: echo "{{steps.greet.outputs.time}}"
+      run: echo "{{steps.greet.outputs}}"
