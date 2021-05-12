@@ -1,6 +1,6 @@
 name : Sample commands
 
-on : [push]
+on : [push, pull_request]
 
 jobs:
   sample-workflow:
