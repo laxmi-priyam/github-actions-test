@@ -1,11 +1,18 @@
-name : Final commands
+name : Sample commands
 
-on : [push]
+#on : [push, pull_request]
+on: 
+  repository_dispatch:
+    types: [build]
+  pull_request:
+    types: [closed, assigned, reopened]
 
 jobs:
   sample-workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: display repository
+        run: echo "${{github.event.client_payload.env}}"
       - name: checkout git
         uses: actions/checkout@v1
       - name: List files after checkout
