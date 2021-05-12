@@ -5,7 +5,7 @@ on:
   repository_dispatch:
     types: [build]
   pull_request:
-    types: [closed, assigned]
+    types: [closed, assigned, reopened]
 
 jobs:
   sample-workflow:
