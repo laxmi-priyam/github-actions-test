@@ -4,7 +4,7 @@ name : Sample commands
 on: 
   repository_dispatch:
     types: [build]
-  push:
+  pull_request:
 
 jobs:
   sample-workflow:
