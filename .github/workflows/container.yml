@@ -11,7 +11,7 @@ jobs:
       - name: Steps with php-docker
         uses: docker://php:8.0.6-zts-buster
         with:
-          entrypoint: 'bin/echo'
+          entrypoint: '/bin/echo'
           args: 'Hello Laxmi'
       - name: logs version with php-docker
         uses: docker://php:8.0.6-zts-buster
