@@ -4,7 +4,7 @@ jobs:
   php-docker:
     runs-on: ubuntu-latest
     container:
-      image: php: 8.0.6-cli-buster
+      image: php:8.0.6-cli-buster
     steps:
       - name: log php version
         run: php -v
@@ -13,3 +13,8 @@ jobs:
         with:
           entrypoint: 'bin/echo'
           args: 'Hello Laxmi'
+      - name: logs version with php-docker
+        uses: docker://php:8.0.6-zts-buster
+        with:
+          entrypoint: '/usr/local/bin/php'
+          args: -v
