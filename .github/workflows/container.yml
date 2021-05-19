@@ -18,3 +18,8 @@ jobs:
         with:
           entrypoint: '/usr/local/bin/php'
           args: -v
+      - name: Push a slack message
+        uses: docker://technosophos/slack-notify
+        env:
+          SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK}}
+          SLACK_MESSAGE: "Hello Laxmi, this is slack message!!!"
