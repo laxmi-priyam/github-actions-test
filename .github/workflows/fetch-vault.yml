@@ -1,0 +1,22 @@
+name: fetch-vault
+on: [push]
+jobs:
+  fetch-vault-secrets:
+    name: 'Polaris secrets stored in vault' 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v1
+
+      - uses: actions/checkout@v2
+        with:
+          repository: laxmi-priyam/github-actions-test
+          path: github-actions-test
+          ref: vault
+
+      - uses: /vault
+        with: 
+          WORKFLOW_TYPE: "polaris"
+          VAULT_SERVER_URL: "http://127.0.0.1:8200/ui/"
+          VAULT_NAMESPACE: ""
+          VAULT_TOKEN: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
