@@ -14,7 +14,7 @@ jobs:
           path: github-actions-test
           ref: vault
 
-      - uses: github-actions-test/.github/actions/vault
+      - uses: ./github-actions-test/.github/actions/vault
         with: 
           WORKFLOW_TYPE: "polaris"
           VAULT_SERVER_URL: "http://127.0.0.1:8200/ui/"
