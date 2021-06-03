@@ -13,15 +13,16 @@ inputs:
   VAULT_TOKEN:
     description: 'VAULT token'
     required: true
- runs:
-   using: 'composite'
-   steps:
-     - name: Vault
-       env:
-         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-         VAULT_ADDR: ${{inputs.VAULT_SERVER_URL}}
-         VAULT_NAMESPACE: ${{inputs.VAULT_NAMESPACE}}
-         VAULT_TOKEN: ${{inputs.VAULT_TOKEN}}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Vault
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        VAULT_ADDR: ${{inputs.VAULT_SERVER_URL}}
+        VAULT_NAMESPACE: ${{inputs.VAULT_NAMESPACE}}
+        VAULT_TOKEN: ${{inputs.VAULT_TOKEN}}
       shell: bash
       run: |
         curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
