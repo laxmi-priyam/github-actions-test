@@ -1,4 +1,4 @@
-name: fetch-vault
+name: fetch vault
 on: [push]
 jobs:
   fetch-vault-secrets:
