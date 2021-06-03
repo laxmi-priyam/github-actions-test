@@ -13,8 +13,6 @@ inputs:
   VAULT_TOKEN:
     description: 'VAULT token'
     required: true
-
- 
  runs:
    using: 'composite'
    steps:
