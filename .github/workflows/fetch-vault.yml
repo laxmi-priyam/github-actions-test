@@ -11,9 +11,8 @@ jobs:
       - uses: actions/checkout@v1
         with:
           repository: laxmi-priyam/github-actions-test
-          path: github-actions-test
           ssh-strict: false
-      - uses: ./github-actions-test/.github/actions/vault
+      - uses: ./.github/actions/vault
         with: 
           WORKFLOW_TYPE: "polaris"
           VAULT_SERVER_URL: "http://127.0.0.1:8200/ui/"
