@@ -12,8 +12,7 @@ jobs:
         with:
           repository: laxmi-priyam/github-actions-test
           path: github-actions-test
-          ref: vault
-
+          ssh-strict: false
       - uses: ./github-actions-test/.github/actions/vault
         with: 
           WORKFLOW_TYPE: "polaris"
