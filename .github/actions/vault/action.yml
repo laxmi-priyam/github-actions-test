@@ -21,9 +21,9 @@ runs:
     - name: Vault
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        VAULT_ADDR: "https://127.0.0.1:8201"
-        VAULT_NAMESPACE: ""
-        VAULT_TOKEN: "s.m76oOBDI61an1xNtVMs7KMza"
+        VAULT_ADDR: ${{inputs.VAULT_SERVER_URL}}
+        VAULT_NAMESPACE: ${{inputs.VAULT_NAMESPACE}}
+        #VAULT_TOKEN: ${{inputs.VAULT_TOKEN}}
 
       shell: bash
       run: |
@@ -40,6 +40,7 @@ runs:
         echo "SLACK_CHANNEL_NAME=$(vault kv get -field=SLACK_CHANNEL_NAME secret/pilot-project)" >> $GITHUB_ENV
         echo "SLACK_API_TOKEN=$(vault kv get -field=SLACK_API_TOKEN secret/pilot-project)" >> $GITHUB_ENV
         fi
+
 
 
 
