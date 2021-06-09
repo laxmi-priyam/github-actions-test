@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v1
       - uses: hashicorp/vault-action@v2.0.1
         with: 
-          url: "http://127.0.0.1:8200"
+          url: "http://10.0.75.1:8200"
           tlsSkipVerify: true
           token: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
           secrets: kv/data/ci/dockerUsername DOCKERHUB_USERNAME
