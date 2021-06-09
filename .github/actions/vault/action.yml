@@ -21,7 +21,7 @@ runs:
     - name: Vault
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        VAULT_ADDR: "https://127.0.0.1:8200"
+        VAULT_ADDR: "https://127.0.0.1:8201"
         VAULT_NAMESPACE: ""
         VAULT_TOKEN: "s.m76oOBDI61an1xNtVMs7KMza"
 
@@ -32,6 +32,7 @@ runs:
         sudo apt-get update && sudo apt-get install vault
         echo 'VAULT_TOKEN=>'
         echo $VAULT_TOKEN
+        vault status
         vault login $VAULT_TOKEN
         if [[ "${{inputs.WORKFLOW_TYPE}}" == "polaris" ]]; then
         echo "POLARIS_ACCESS_TOKEN=$(vault kv get -field=POLARIS_ACCESS_TOKEN secret/pilot-project)" >> $GITHUB_ENV
