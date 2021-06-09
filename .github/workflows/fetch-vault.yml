@@ -13,9 +13,9 @@ jobs:
           repository: laxmi-priyam/github-actions-test
           ssh-strict: false
       - uses: ./.github/actions/vault
+        tlsSkipVerify: true
         with: 
           WORKFLOW_TYPE: "polaris"
-          tlsSkipVerify: true
           VAULT_SERVER_URL: "http://127.0.0.1:8200"
           VAULT_NAMESPACE: ""
           VAULT_TOKEN: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
