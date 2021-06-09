@@ -21,13 +21,11 @@ runs:
     - name: Vault
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        VAULT_ADDR: ${{inputs.VAULT_SERVER_URL}}
-        VAULT_NAMESPACE: ${{inputs.VAULT_NAMESPACE}}
-        VAULT_TOKEN: ${{inputs.VAULT_TOKEN}}
+        VAULT_ADDR: "http://127.0.0.1:8200"
+        VAULT_NAMESPACE: ""
+        VAULT_TOKEN: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
 
       shell: bash
-      tlsSkipVerify: true
-
       run: |
         curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
         sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
