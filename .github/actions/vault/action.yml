@@ -21,7 +21,7 @@ runs:
     - name: Vault
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-        VAULT_ADDR: "http://127.0.0.1:8200"
+        VAULT_ADDR: "https://127.0.0.1:8200"
         VAULT_NAMESPACE: ""
         VAULT_TOKEN: "s.m76oOBDI61an1xNtVMs7KMza"
 
