@@ -12,8 +12,5 @@ jobs:
           url: "http://127.0.0.1:8200"
           tlsSkipVerify: true
           token: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
-          secrets: |
-          kv/data/ci/dockerUsername DOCKERHUB_USERNAME
-          kv/data/ci/dockerPassword DOCKERHUB_PASSWORD
-
+          secrets: kv/data/ci/dockerUsername DOCKERHUB_USERNAME
 
