@@ -13,7 +13,7 @@ jobs:
           tlsSkipVerify: true
           token: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
           secrets: |
-          kv/data/ci/dockerUsername DOCKERHUB_USERNAME;
+          kv/data/ci/dockerUsername DOCKERHUB_USERNAME
           kv/data/ci/dockerPassword DOCKERHUB_PASSWORD
 
 
