@@ -9,8 +9,6 @@ jobs:
         uses: actions/checkout@v1
       - uses: hashicorp/vault-action@v2.0.1
         with: 
-          WORKFLOW_TYPE: "polaris"
-          VAULT_SERVER_URL: "http://127.0.0.1:8200"
+          url: "http://127.0.0.1:8200"
           tlsSkipVerify: true
-          VAULT_NAMESPACE: ""
-          VAULT_TOKEN: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
+          token: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
