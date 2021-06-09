@@ -32,7 +32,6 @@ runs:
         sudo apt-get update && sudo apt-get install vault
         echo 'VAULT_TOKEN=>'
         echo $VAULT_TOKEN
-        vault status
         vault login $VAULT_TOKEN
         if [[ "${{inputs.WORKFLOW_TYPE}}" == "polaris" ]]; then
         echo "POLARIS_ACCESS_TOKEN=$(vault kv get -field=POLARIS_ACCESS_TOKEN secret/pilot-project)" >> $GITHUB_ENV
