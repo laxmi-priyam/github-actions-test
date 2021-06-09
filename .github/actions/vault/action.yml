@@ -24,7 +24,10 @@ runs:
         VAULT_ADDR: ${{inputs.VAULT_SERVER_URL}}
         VAULT_NAMESPACE: ${{inputs.VAULT_NAMESPACE}}
         VAULT_TOKEN: ${{inputs.VAULT_TOKEN}}
+
       shell: bash
+      tlsSkipVerify: true
+
       run: |
         curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
         sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
