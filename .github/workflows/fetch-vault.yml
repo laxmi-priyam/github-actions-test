@@ -7,10 +7,14 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v1
-      - uses: hashicorp/vault-action@v2.0.1
-        with: 
-          url: "http://10.0.75.1:8200"
-          tlsSkipVerify: true
-          token: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
-          secrets: kv/data/ci/dockerUsername DOCKERHUB_USERNAME
 
+      - uses: actions/checkout@v2
+        with:
+          repository: laxmi-priyam/github-actions-test
+          ssh-strict: false
+      - uses: ./.github/actions/vault
+        with: 
+          WORKFLOW_TYPE: "polaris"
+          VAULT_SERVER_URL: "http://10.0.75.1:8200"
+          VAULT_NAMESPACE: ""
+          VAULT_TOKEN: "s.ebUXzEd8Q2JrY8HzF6IyhH6B"
