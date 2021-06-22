@@ -1,0 +1,22 @@
+{
+  "name": "github-actions-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laxmi-priyam/github-actions-test.git"
+  },
+  "author": "laxmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laxmi-priyam/github-actions-test/issues"
+  },
+  "homepage": "https://github.com/laxmi-priyam/github-actions-test#readme",
+  "devDependencies": {
+    "cypress": "^7.5.0"
+  }
+}
